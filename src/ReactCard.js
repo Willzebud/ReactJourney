@@ -22,27 +22,27 @@ export const REACT_CARDS = [
   },
   {
     name: "useEffect",
-    category: "Hook",
+    category: "Hooks",
     url: "https://react.dev/reference/react/useEffect",
   },
   {
     name: "useReducer",
-    category: "Hook",
+    category: "Hooks",
     url: "https://react.dev/reference/react/useReducer",
   },
   {
     name: "useRef",
-    category: "Hook",
+    category: "Hooks",
     url: "https://react.dev/reference/react/useRef",
   },
   {
     name: "useMemo",
-    category: "Hook",
+    category: "Hooks",
     url: "https://react.dev/reference/react/useMemo",
   },
   {
     name: "useCallback",
-    category: "Hook",
+    category: "Hooks",
     url: "https://react.dev/reference/react/useCallback",
   },
   {
@@ -57,12 +57,12 @@ export const REACT_CARDS = [
   },
   {
     name: "useImperativeHandle",
-    category: "Hook",
+    category: "Hooks",
     url: "https://react.dev/reference/react/useImperativeHandle",
   },
   {
     name: "useLayoutEffect",
-    category: "Hook",
+    category: "Hooks",
     url: "https://react.dev/reference/react/useLayoutEffect",
   },
   {
@@ -77,7 +77,7 @@ export const REACT_CARDS = [
   },
   {
     name: "useDebugValue",
-    category: "Hook",
+    category: "Hooks",
     url: "https://react.dev/reference/react/useDebugValue",
   },
   {
