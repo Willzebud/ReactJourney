@@ -1,9 +1,10 @@
 // src/Cards.jsx
-//import { Button } from "./Button";
+import { Button, buttonVariants } from "./Button";
 import { ReactSvg } from "./logoReact";
 import Link from "next/link";
+import { BookOpenText, PlusCircle } from "lucide-react";
 
-export const Cards = ({ items }) => {
+export const Cards = ({ items, hideCategory }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-4 rounded-lg border p-4 shadow transition-colors hover:border-gray-300 hover:bg-gray-100">
       <div className="flex w-full items-center gap-2">
@@ -13,8 +14,25 @@ export const Cards = ({ items }) => {
       <p className="line-clamp-1 w-full overflow-hidden text-center text-lg font-extrabold">
         {items.name}
       </p>
-      <div className="flex w-full items-center gap-2">{items.category}</div>
-      <Link href=""></Link>
+      <div className="flex w-full items-center gap-2">
+        {hideCategory ? null : (
+          <p className="line-clamp-1 text-start text-xs text-gray-400">
+            {items.category}
+          </p>
+        )}
+        <Link
+          href={items.url}
+          className={buttonVariants({
+            variant: "secondary",
+            className: "ml-auto",
+          })}
+        >
+          <BookOpenText size={16} />
+        </Link>
+        <Button variant="secondary">
+          <PlusCircle size={16} />
+        </Button>
+      </div>
     </div>
   );
 };

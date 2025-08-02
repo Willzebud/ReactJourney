@@ -7,7 +7,7 @@ import clsx from "clsx";
 export const Menu = ({ filters, currentFilter }) => {
   return (
     <aside className="flex w-full flex-wrap gap-4 lg:max-w-[200px] lg:flex-col">
-      <MenuFilter isActive={!filters} filter="" key="filter">
+      <MenuFilter isActive={!currentFilter} filter="" key="filter">
         all
       </MenuFilter>
       {filters.map((filter) => {

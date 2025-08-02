@@ -15,11 +15,14 @@ export default function Home() {
       <Header />
       <div className="py-2 mb-4 mt-8 flex flex-1 gap-4 overflow-auto max-lg:flex-col">
         <Menu currentFilter={currentFilter} filters={filters} />
-      </div>
-      <div className="grid grid-cols-1">
-        {REACT_CARDS.map((card) => {
-          return <Cards items={card} key={card.name} />
+        <div className="grid grid-cols-1 overflow-auto h-fit w-full md:grid-col-2 lg:grid-col-3 gap-4">
+        {REACT_CARDS.filter((card) => {
+          if (!currentFilter) return true;
+          return card.category === currentFilter;
+        }).map((card) => {
+          return <Cards hideCategory={currentFilter} items={card} key={card.name} />
         })}
+      </div>
       </div>
     </div>
   );
